@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Банк Калькулятор</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="Company Logo" class="logo">
+    <div class="phone-numbers">
+        8-800-100-5005<br>
+        +7(3452)522-000
+    </div>
+</header>
+
+<nav>
+    <a href="#">Кредитные карты</a>
+    <a href="#" class="active-tab">Вклады</a>
+    <a href="#">Дебетовая карта</a>
+    <a href="#">Страхование</a>
+    <a href="#">Друзья</a>
+    <a href="#">Интернет-банк</a>
+</nav>
+
+<div class="container">
+    <h2 class="calculator-title">Калькулятор</h2>
+    <form method="post" id="calc-form">
+        <div class="input-group">
+            <label for="start-date">Дата оформления вклада:</label>
+            <input type="text" id="start-date" placeholder="дд.мм.гггг" readonly>
+        </div>
+        <div class="input-group">
+            <label for="deposit-amount">Сумма вклада:</label>
+            <input type="text" id="deposit-amount" name="deposit-amount" value="1000" min="1000" max="3000000">
+            <div id="deposit-amount-slider" class="slider"></div>
+        </div>
+        <div class="input-group">
+            <label for="deposit-term">Срок вклада:</label>
+            <select id="deposit-term" name="deposit-term">
+                <option value="1">1 год</option>
+                <option value="2">2 года</option>
+                <option value="3">3 года</option>
+                <option value="4">4 года</option>
+                <option value="5">5 лет</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label>Пополнение вклада:</label>
+            <div class="radio">
+                <input type="radio" id="deposit-replenishment-yes" name="deposit-replenishment" value="yes">
+                <label for="deposit-replenishment-yes">Да</label>
+                <input type="radio" id="deposit-replenishment-no" name="deposit-replenishment" value="no" checked>
+                <label for="deposit-replenishment-no">Нет</label>
+            </div>
+        </div>
+        <div class="input-group">
+            <label for="replenishment-amount">Сумма пополнения вклада:</label>
+            <input type="text" id="replenishment-amount" name="replenishment-amount" value="1000" readonly>
+            <div id="replenishment-amount-slider" class="slider"></div>
+        </div>
+        <button class="calculate-btn" id="calculate-btn" type="button">Рассчитать</button>
+        <div class="result" id="result">Результат: </div>
+    </form>
+</div>
+
+<footer>
+    <a href="#">Кредитные карты</a> |
+    <a href="#">Вклады</a> |
+    <a href="#">Дебетовая карта</a> |
+    <a href="#">Страхование</a> |
+    <a href="#">Друзья</a> |
+    <a href="#">Интернет-банк</a>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
